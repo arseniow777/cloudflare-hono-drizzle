@@ -1,0 +1,6 @@
+# Ignore artifacts:
+.wrangler
+drizzle
+worker-configuration.d.ts
+bun.lock
+pnpm-lock.yaml
