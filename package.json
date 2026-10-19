@@ -1,0 +1,21 @@
+{
+  "name": "cloudflare-hono-drizzle",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "types": "wrangler types",
+    "exc-db-local": "wrangler d1 execute cloudflare-hono-drizzle-db --local --file=./src/db/schema.sql",
+    "generate": "drizzle-kit generate",
+    "migrate": "wrangler d1 migrations apply cloudflare-hono-drizzle-db --local"
+  },
+  "dependencies": {
+    "@types/node": "^26.6.5",
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.11",
+    "wrangler": "^4.110.0"
+  }
+}
