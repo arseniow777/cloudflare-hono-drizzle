@@ -5,17 +5,27 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
     "types": "wrangler types",
-    "exc-db-local": "wrangler d1 execute cloudflare-hono-drizzle-db --local --file=./src/db/schema.sql",
+    "exc:db:local": "wrangler d1 execute cloudflare-hono-drizzle-db --local --file=./src/db/schema.sql",
     "generate": "drizzle-kit generate",
-    "migrate": "wrangler d1 migrations apply cloudflare-hono-drizzle-db --local"
+    "migrate": "wrangler d1 migrations apply cloudflare-hono-drizzle-db --local",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@hono/eslint-config": "^2.1.1",
     "@types/node": "^26.6.5",
+    "@typescript-eslint/eslint-plugin": "^8.71.2",
+    "@typescript-eslint/parser": "^8.71.2",
     "drizzle-orm": "^0.45.4",
+    "eslint-plugin-drizzle": "^0.2.3",
     "hono": "^4.13.13"
   },
   "devDependencies": {
     "drizzle-kit": "^0.31.11",
+    "eslint": "^10.13.0",
+    "prettier": "3.9.10",
     "wrangler": "^4.110.0"
   }
 }
