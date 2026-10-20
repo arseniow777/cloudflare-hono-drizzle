@@ -4,3 +4,4 @@ onlyBuiltDependencies:
 allowBuilds:
   esbuild: true
   workerd: true
+p
