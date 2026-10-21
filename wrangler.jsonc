@@ -9,6 +9,7 @@
       "database_name": "cloudflare-hono-drizzle-db",
       "database_id": "7e24bbf0-44ea-4f3f-8ceb-f262cf77a144",
       "migrations_dir": "drizzle/migrations",
+      "migrations_pattern": "drizzle/migrations/*/migration.sql",
     },
   ],
   // "compatibility_flags": [
